@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Error: Failed to Fetch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white rounded-lg shadow-md w-full max-w-md overflow-hidden">
+        <div class="p-6">
+            <div class="flex items-center gap-2 text-red-600 text-xl font-semibold mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                    <line x1="12" x2="12" y1="9" y2="13"></line>
+                    <line x1="12" x2="12.01" y1="17" y2="17"></line>
+                </svg>
+                Type Error: Failed to Fetch
+            </div>
+            <p class="text-gray-600 mb-6">
+                We encountered a problem while trying to fetch data. This could be due to a network issue or a problem with our servers.
+            </p>
+            <button id="retryButton" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                Retry
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('retryButton').addEventListener('click', function() {
+            console.log('Retrying fetch operation...');
+            // In a real scenario, you would re-fetch the data here
+            // For demonstration, we'll just reload the page
+            location.reload();
+        });
+    </script>
+</body>
+</html>
